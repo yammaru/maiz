@@ -1,0 +1,10 @@
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\bin\Debug\Maiz.exe.config
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\bin\Debug\Maiz.exe
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\bin\Debug\Maiz.pdb
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.csproj.AssemblyReference.cache
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.Form1.resources
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.Properties.Resources.resources
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.csproj.GenerateResource.cache
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.csproj.CoreCompileInputs.cache
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.exe
+C:\Users\DevZeros\Documents\Nueva carpeta\SimulacionMaiz\Maiz\obj\Debug\Maiz.pdb
