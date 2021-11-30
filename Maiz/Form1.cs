@@ -43,20 +43,43 @@ namespace Maiz
             progressBar1.Value=(tanque);
             label6.Text = "Agua al 100%";
         }
+        Boolean lluvia;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            lluvia = true;
+        }
+
+        private void txtph_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char letra = e.KeyChar;
+            e.Handled = validacion_numerico(letra);
+        }
+       
+        Boolean validacion_numerico(char e)
+        {
+            if ((e >= 32 && e <= 47) || (e >= 58 && e <= 255))
+            {
+                if (e != 127)
+                {
+                    MessageBox.Show("no es un numero!!!");
+                   
+                    return true;
+                }
+             
+            }
+          return false; 
+        }
+
+        private void txtHumedad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char letra = e.KeyChar;
+            e.Handled=validacion_numerico(letra);
+        }
 
         private void txtInterval_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32&&e.KeyChar<=47)||(e.KeyChar>=58&&e.KeyChar<=255 ) )
-            {
-                if ( e.KeyChar != 127)
-                {
-                    MessageBox.Show("no es un numero!!!");
-                e.Handled = true;
-                return;
-                }
-               
-            }
-        
+            char letra = e.KeyChar;
+            e.Handled = validacion_numerico(letra);
         }
 
         private void btnParar_Click(object sender, EventArgs e)
@@ -66,14 +89,20 @@ namespace Maiz
 
         private void btnEmpezar_Click(object sender, EventArgs e)
         {
-            if (txtInterval.Text == "")
+            if (txtInterval.Text == ""||txtHumedad.Text==""||txtph.Text=="")
             {
-                MessageBox.Show("vacio");
+                MessageBox.Show("Faltan datos");
             }
             else if (tanque <= 0) { MessageBox.Show("tanque vacio"); }
+            else if (Convert.ToInt32(txtph.Text) <= 5 ) { MessageBox.Show("pH bajo, la planta podria no brotar"); }
+            else if (Convert.ToInt32(txtph.Text) >= 8) { MessageBox.Show("pH bajo, la planta podria no brotar"); }
             else {
                 timer1.Start();
                 timer1.Interval = Convert.ToInt32(txtInterval.Text);
+                if (i == 0) {
+                    pictureBoxCultivo.Image = imageList1.Images[0];
+                }
+                
             }
             
         }
@@ -87,7 +116,7 @@ namespace Maiz
                 aux++;
                 if (aux==1)
                 {
- MessageBox.Show("tanque Vacio!!!");
+                    MessageBox.Show("tanque Vacio!!!");
                     aux = 0;
                 }
                
